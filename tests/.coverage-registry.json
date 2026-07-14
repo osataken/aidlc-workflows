@@ -20,9 +20,9 @@
     "render-surface": "tui"
   },
   "counts": {
-    "total": 452,
+    "total": 453,
     "enumeratedByClass": {
-      "function": 231,
+      "function": 232,
       "audit": 72,
       "scope": 9,
       "stage": 32,
@@ -31,7 +31,7 @@
       "render-surface": 7
     },
     "coveredByClass": {
-      "function": 95,
+      "function": 96,
       "audit": 31,
       "scope": 9,
       "stage": 8,
@@ -1709,6 +1709,18 @@
     },
     {
       "unitClass": "function",
+      "unitId": "function:KNOWN_HARNESS_DIRS",
+      "minMechanism": "none",
+      "coveredBy": [
+        {
+          "file": "tests/unit/t241-opencode-adapter.test.ts",
+          "mechanism": "none"
+        }
+      ],
+      "status": "covered"
+    },
+    {
+      "unitClass": "function",
       "unitId": "function:KNOWN_PER_UNIT_STAGES",
       "minMechanism": "none",
       "coveredBy": [],
@@ -3139,6 +3151,10 @@
         {
           "file": "tests/unit/t13-hook-input-robustness.test.ts",
           "mechanism": "cli"
+        },
+        {
+          "file": "tests/unit/t241-opencode-adapter.test.ts",
+          "mechanism": "none"
         }
       ],
       "status": "covered"
