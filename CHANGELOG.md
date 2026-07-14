@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.4.2] - 2026-07-16
+
+The user guide, harness guides, generated onboarding, and `/aidlc --help` now agree with the implemented command, harness, agent, and audit surfaces. Kiro IDE instructions also distinguish its skill-based conductor from Kiro CLI's agent-v1 defaults. **Upgrade:** re-copy your `dist/<harness>/` shell to refresh the corrected onboarding and help text.
+
+* `/aidlc --help` now lists only commands routed by `/aidlc`; the direct-only `aidlc-utility.ts codekb-path` helper is documented separately.
+* Kiro CLI is covered throughout the harness roster, and Kiro IDE setup no longer claims that CLI-only `settings/cli.json` selects an IDE default agent.
+* Kiro IDE's conductor and primitive map now distinguish its prose-only reviewer scope and IDE-native rule and tool surfaces from the unregistered reviewer-scope hook and Kiro CLI-only resources, settings, and headless mode.
+* Agent documentation distinguishes the 14-agent roster (11 domain agents, two reviewers, and the composer), and the audit taxonomy is synchronized with its 72-event registry.
+* Agent tool tables describe expected Bash and WebSearch use rather than access grants; every persona continues to inherit the full session toolset.
+* Documentation parity tests now derive command, harness, agent, and event-count claims from authored implementation surfaces to prevent recurrence.
+
 ## [2.4.1] - 2026-07-16
 
 Revision counting now works for the Reverse Engineering gate. Rejecting the RE approval gate ("Request Changes") previously left `Revision Count` at 0 with no `GATE_REJECTED` row when the orchestrator honored the revision conversationally without running the reject verb: codekb artifact writes were invisible to the audit trail, so the approve-time backstop that backfills unrecorded rejects had nothing to see and excluded codekb stages outright. **Upgrade:** re-copy your `dist/<harness>/` shell into the project.
